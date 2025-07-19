@@ -10,7 +10,7 @@
         :key="element.id"
       >
         <div
-          class="mt-[30px] relative flex flex-col justify-center text-center rounded-[30px] border border-secondary dark:bg-[#ffffff29] bg-primary"
+          class="mt-[30px] relative flex flex-col justify-center text-center rounded-[30px] border border-secondary dark:bg-[#ffffff29] bg-primary h-full"
           data-aos="fade-up"
           :data-aos-delay="element.id * 100"
         >
@@ -47,45 +47,45 @@ import SectionHeader from "@/components/Ul/SectionHeader.vue";
 const services = ref([
   {
     id: "1",
-    icon: "https://img.icons8.com/ios-filled/100/daed1a/google-code.png",
-    name: "Web Development",
+    icon: "https://img.icons8.com/ios-glyphs/100/daed1a/web-design.png",
+    name: "Custom Landing Pages",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      "Designing and building beautiful, high-converting landing pages to showcase your product or service and attract customers.",
   },
   {
     id: "2",
-    icon: "https://img.icons8.com/external-vectorslab-glyph-vectorslab/100/daed1a/external-Technical-Writing-mobile-app-development-vectorslab-glyph-vectorslab.png",
-    name: "Technical Writing",
+    icon: "https://img.icons8.com/ios-filled/100/daed1a/user-male-circle.png",
+    name: "Personal Portfolios",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      "Creating professional and modern personal portfolios to highlight your skills, projects, and experience to potential employers.",
   },
   {
     id: "3",
-    icon: "https://img.icons8.com/ios-filled/100/daed1a/email-open.png",
-    name: "Technical Writing",
+    icon: "https://img.icons8.com/ios-filled/100/daed1a/briefcase.png",
+    name: "Small Business Websites",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      "Developing clean and informative websites for small businesses to establish a strong online presence and connect with clients.",
   },
   {
     id: "4",
-    icon: "https://img.icons8.com/ios-filled/100/daed1a/email-open.png",
-    name: "Technical Writing",
+    icon: "https://img.icons8.com/?size=100&id=32258&format=png&color=daed1a",
+    name: "Fully Responsive Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      "Ensuring your website looks perfect and functions flawlessly on all devices, from mobile phones to large desktop screens.",
   },
   {
     id: "5",
-    icon: "https://img.icons8.com/ios-filled/100/daed1a/windows10-personalization.png",
-    name: "Technical Writing",
+    icon: "https://img.icons8.com/ios-filled/100/daed1a/rocket.png",
+    name: "Performance Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      "Optimizing your website for fast loading speeds and a smooth user experience, which is crucial for visitor retention and SEO.",
   },
   {
     id: "6",
-    icon: "https://img.icons8.com/ios-filled/100/daed1a/web-design.png",
-    name: "Technical Writing",
+    icon: "https://img.icons8.com/ios-filled/100/daed1a/maintenance.png",
+    name: "Website Maintenance",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatibus.",
+      "Providing ongoing support and maintenance to keep your website updated, secure, and running smoothly after launch.",
   },
 ]);
 </script>

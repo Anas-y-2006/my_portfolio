@@ -28,9 +28,10 @@
           projects.
         </p>
         <div class="mt-6 flex justify-center lg:justify-start">
-          <Button lable="Hire Me" />
+          <Button lable="Hire Me" :onclick="scrollToContact" />
           <a
-            href=""
+            href="/resume.pdf"
+            download="Anas-Y-Resume.pdf"
             class="font-semiblod text-lg w-[10rem] h-[55px] dark:text-secondary rounded-full ml-2 border-2 dark:border-secondary hover:scale-105 bg-white dark:bg-transparent flex justify-center items-center text-primary border-primary"
           >
             <Icon icon="line-md:download-loop" class="text-3xl" />
@@ -71,8 +72,16 @@
     </svg>
   </section>
 </template>
+
 <script setup>
 import Button from "@/components/Ul/Button.vue";
+
+const scrollToContact = () => {
+  const contactSection = document.querySelector("#contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
 </script>
 
 <style scoped>

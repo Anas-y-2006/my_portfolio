@@ -9,9 +9,11 @@
     <component
       :is="type === 'textarea' ? 'textarea' : 'input'"
       :id="id"
+      :name="name"
       :rows="type === 'textarea' ? rows : undefined"
       :placeholder="placeholder"
-      class="shadow-sm text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:ring-primary-500 focus-border-primary-500 border border-secondary dark:bg-[#ffffff29] bg-primary"
+      class="shadow-sm text-gray-300 text-sm rounded-lg block w-full p-2.5 focus:ring-primary-500 focus-border-primary-500 border border-secondary dark:bg-[#ffffff29] bg-primary"
+      required
     ></component>
   </div>
 </template>
@@ -23,5 +25,6 @@ defineProps({
   type: { type: String, default: "text" },
   placeholder: { type: String, default: "" },
   rows: { type: Number, default: 4 }, //Used only for textarea
+  name: { type: String, default: "" },
 });
 </script>

@@ -30,7 +30,9 @@
               </h3>
             </header>
             <p class="text-sm md:text-base text-white">{{ item.degree }}</p>
-            <p class="text-sm md:text-base text-white">{{ item.duration }}</p>
+            <p class="text-sm md:text-base text-gray-300">
+              {{ item.duration }}
+            </p>
           </section>
         </article>
       </li>
@@ -42,14 +44,14 @@
 import { ref } from "vue";
 const Education = ref([
   {
-    duration: "03/2008-07/2011",
-    School: "School 1",
-    degree: "Software Engineer",
+    duration: "November 2024 - 2027",
+    School: "Asia Pacific University (APU)",
+    degree: "Engineering, Mechatronics, Robotics",
   },
   {
-    duration: "03/2008-07/2011",
-    School: "School 2",
-    degree: "Software Engineer",
+    duration: "2021-2024",
+    School: "Cairo High School",
+    degree: "High School Diploma",
   },
 ]);
 </script>

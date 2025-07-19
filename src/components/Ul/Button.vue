@@ -1,6 +1,7 @@
 <template>
   <button
     @click="onclick"
+    :type="type"
     class="relative overflow-hidden rounded-full bg-gray-700 dark:bg-white text-white w-[180px] h-[60px] test-lg font-semibold flex justify-center items-center transition-all duration-300"
   >
     <div
@@ -28,6 +29,10 @@ defineProps({
   onclick: {
     type: Function,
     default: () => {},
+  },
+  type: {
+    type: String,
+    default: "button",
   },
 });
 </script>

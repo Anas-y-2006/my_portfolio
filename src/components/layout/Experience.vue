@@ -44,14 +44,14 @@
 import { ref } from "vue";
 const Experience = ref([
   {
-    duration: "03/2008-07/2011",
+    duration: "July 2024 - Sep 2024",
     Title: "Frontend Developer",
-    company: "Spotify",
+    company: "Mimar Tech",
   },
   {
-    duration: "03/2008-07/2011",
-    Title: "Frontend Developer",
-    company: "Spotify",
+    duration: "8-Month Training",
+    Title: "Frontend Developer (Internship)",
+    company: "Smart Tech",
   },
 ]);
 </script>

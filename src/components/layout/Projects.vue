@@ -1,7 +1,6 @@
 <template>
   <section id="projects" class="relative w-11/12 px-16 mx-auto">
     <SectionHeader title="My Projects" />
-    <!-- Custom Navigation Buttons -->
     <button
       class="swiper-prev absolute top-2/3 left-4 transform -translate-y-1/2 z-10 text-white dark:bg-secondary bg-primary p-4 rounded-full"
     >
@@ -13,7 +12,6 @@
       <Icon icon="line-md:arrow-right" class="font-bold text-3xl" />
     </button>
 
-    <!-- Swiper Component -->
     <swiper
       :effect="'coverflow'"
       grabCursor
@@ -40,7 +38,7 @@
         <ProjectCard
           :title="project.title"
           :description="project.description"
-          :image="'src/assets/images/' + project.image"
+          :image="getImageUrl(project.image)"
           :tags="project.tags"
           :liveLink="project.liveLink"
           :codeLink="project.codeLink"
@@ -61,58 +59,83 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { EffectCoverflow, Navigation } from "swiper/modules";
 import { ref } from "vue";
 
+// (مهم) هذه الدالة الجديدة هي الحل
+const getImageUrl = (name) => {
+  return new URL(`../../assets/images/${name}`, import.meta.url).href;
+};
+
 // Define navigation options
 const navigationOptions = {
-  prevEl: ".swiper-next",
-  nextEl: ".swiper-prev",
+  prevEl: ".swiper-prev",
+  nextEl: ".swiper-next",
 };
 
 const projects = ref([
   {
-    title: "Portfolio Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequatur.",
-    image: "/ptoject-1.png",
+    title: "Online Store",
+    description: "A responsive online store built with Vue.js and Vuetify.",
+    image: "ptoject-1.png", //  فقط اسم الملف
+    tags: ["Vue.js", "vutify", "Javascript"],
+    liveLink: "https://strong-macaron-69f628.netlify.app/",
+    codeLink: "",
+  },
+  {
+    title: "Landing Page",
+    description: "This is a landing page built with HTML, CSS, and JavaScript.",
+    image: "project.png", // فقط اسم الملف
     tags: ["HTML", "CSS", "Javascript"],
     liveLink: "/",
-    codeLink: "/",
+    codeLink: "",
+  },
+  {
+    title: "Landing Page",
+    description: "This is a landing page built with HTML, CSS, and Bootstrap.",
+    image: "boma-project.png", // فقط اسم الملف
+    tags: ["HTML", "CSS", "Bootstrap"],
+    liveLink: "/",
+    codeLink: "",
+  },
+  {
+    title: "Landing Page",
+    description: "This is a landing page built with HTML, CSS",
+    image: "noor-al-makarem.png", // فقط اسم الملف
+    tags: ["HTML", "CSS"],
+    liveLink: "/",
+    codeLink: "",
+  },
+  {
+    title: "Landing Page",
+    description: "This is a landing page built with HTML, CSS, and JavaScript.",
+    image: "mimar-tec.png", // فقط اسم الملف
+    tags: ["HTML", "CSS", "Javascript"],
+    liveLink: "/",
+    codeLink: "",
   },
   {
     title: "Portfolio Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequatur.",
-    image: "/ptoject-1.png",
-    tags: ["HTML", "CSS", "Javascript"],
+    description: "THIS personal portfolio ",
+    image: "portfolieo.png", // فقط اسم الملف
+    tags: ["HTML", "CSS"],
     liveLink: "/",
-    codeLink: "/",
+    codeLink: "",
   },
   {
-    title: "Portfolio Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequatur.",
-    image: "/ptoject-1.png",
+    title: "Landing Page",
+    description: "This is a landing page built with HTML, CSS, and JavaScript.",
+    image: "مصحف-الحرمين.png", // فقط اسم الملف
     tags: ["HTML", "CSS", "Javascript"],
     liveLink: "/",
-    codeLink: "/",
+    codeLink: "",
   },
   {
-    title: "Portfolio Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequatur.",
-    image: "/ptoject-1.png",
+    title: "Landing Page",
+    description: "This is a landing page built with HTML, CSS, and JavaScript.",
+    image: "مصحف-الحمد.png", // فقط اسم الملف
     tags: ["HTML", "CSS", "Javascript"],
     liveLink: "/",
-    codeLink: "/",
+    codeLink: "",
   },
-  {
-    title: "Portfolio Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequatur.",
-    image: "/ptoject-1.png",
-    tags: ["HTML", "CSS", "Javascript"],
-    liveLink: "/",
-    codeLink: "/",
-  },
+  // Add more projects if needed
 ]);
 </script>
 
